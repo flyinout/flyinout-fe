@@ -1,5 +1,5 @@
 import Landing from "../components/Landing";
 
-export default () => {
+export default function Home() {
   return <Landing />;
-};
+}
