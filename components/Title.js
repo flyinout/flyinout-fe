@@ -14,9 +14,9 @@ export default function Title() {
         <input
           type="text"
           placeholder="Enter your email"
-          class="input input-primary w-full mx-4"
+          className="input input-primary w-full mx-4"
         />
-        <button class="btn btn-primary normal-case grow-0">
+        <button className="btn btn-primary normal-case grow-0">
           Join the waitlist!
         </button>
       </div>

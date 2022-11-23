@@ -2,6 +2,7 @@ import Header from "./Header";
 import { Illustration } from "./Illustration";
 import ObjectiveSection from "./ObjectiveSection";
 import Title from "./Title";
+import Footer from "./Footer";
 
 /* eslint-disable @next/next/no-img-element */
 export default function Landing() {
@@ -18,6 +19,7 @@ export default function Landing() {
         {/* collaborations */}
         {/* early bird */}
         {/* footer */}
+        <Footer />
       </div>
     </div>
   );
