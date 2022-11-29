@@ -1,24 +1,27 @@
 import { useState } from "react";
 
-export default  function Title() {
+export default function Title() {
 
   const [email, setEmail] = useState('')
 
-  const handleEmailChange =  (e) => {
+  const handleEmailChange = (e) => {
     console.log('console ', e)
     setEmail(e)
-    
+
   }
 
-  const onSubmit =async () => {
+  const onSubmit = async () => {
     console.log('onSubmit')
-     fetch('/api/sheets', {
-      method: 'POST',
-      body: JSON.stringify(email),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    if (fetch) {
+      await fetch('/api/sheets', {
+        method: 'POST',
+        body: JSON.stringify(email),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then((response) => response.json())
+      .then((data) => console.log(data));
+    }
   }
 
   return (

@@ -27,11 +27,13 @@ async function handler(req, res) {
             spreadsheetId: process.env.SHEET_ID,
             range: 'test', // sheet name
         });
-        console.log('response is', response)
+        console.log('response is', response.data)
+        let data = response.data
 
-        res.status(201).json({ message: 'It works!', response });
+        res.status(201).json({ message: 'It works!', data });
+    } else {
+        res.status(200).json({ message: 'Hey!' });
     }
-    res.status(200).json({ message: 'Hey!' });
 }
 
 export default handler;
