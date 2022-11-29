@@ -13,7 +13,7 @@ export default function ObjectiveSection() {
           className="flex rounded-lg  h-96"
           style={{
             background:
-              "linear-gradient(77.79deg, #5C70F4 -5.75%, #9347E7 111.09%);",
+              "linear-gradient(77.79deg, #5C70F4 -5.75%, #9347E7 111.09%)",
           }}
         ></div>
         <div
