@@ -4,7 +4,8 @@ import ObjectiveSection from "./ObjectiveSection";
 import Title from "./Title";
 import Footer from "./Footer";
 import Automations from "./Automations";
-
+import Collaboration from "./Collaboration";
+import EarlyBird from "./EarlyBird"
 /* eslint-disable @next/next/no-img-element */
 export default function Landing() {
   return (
@@ -19,7 +20,8 @@ export default function Landing() {
         <Automations />
         {/* imports */}
         {/* collaborations */}
-        {/* early bird */}
+        <Collaboration />
+        <EarlyBird />
         {/* footer */}
         <Footer />
       </div>
