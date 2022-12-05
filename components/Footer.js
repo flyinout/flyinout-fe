@@ -26,7 +26,7 @@ export default function Footer() {
         </div>
         <div className="mt-5 mb-20 prose">
           <span>© 2022 </span>
-          <a target="_blank" className="no-underline" href="https://flyinout.in/">FlyinOut.in</a>
+          <a target="_blank" rel="noreferrer" className="no-underline" href="https://flyinout.in/">FlyinOut.in</a>
           <span>, All Rights Reserved.</span>
         </div>
       </div>
