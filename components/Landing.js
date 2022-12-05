@@ -3,6 +3,7 @@ import { Illustration } from "./Illustration";
 import ObjectiveSection from "./ObjectiveSection";
 import Title from "./Title";
 import Footer from "./Footer";
+import Automations from "./Automations";
 
 /* eslint-disable @next/next/no-img-element */
 export default function Landing() {
@@ -14,7 +15,8 @@ export default function Landing() {
         <Illustration />
         {/* primary obj */}
         <ObjectiveSection />
-        {/* automations */}
+        {/* Automations */}
+        <Automations />
         {/* imports */}
         {/* collaborations */}
         {/* early bird */}
