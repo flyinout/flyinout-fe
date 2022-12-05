@@ -5,7 +5,9 @@ import Title from "./Title";
 import Footer from "./Footer";
 import Automations from "./Automations";
 import Collaboration from "./Collaboration";
-import EarlyBird from "./EarlyBird"
+import EarlyBird from "./EarlyBird";
+import Imports from "./Imports";
+
 /* eslint-disable @next/next/no-img-element */
 export default function Landing() {
   return (
@@ -18,11 +20,9 @@ export default function Landing() {
         <ObjectiveSection />
         {/* Automations */}
         <Automations />
-        {/* imports */}
-        {/* collaborations */}
+        <Imports />
         <Collaboration />
         <EarlyBird />
-        {/* footer */}
         <Footer />
       </div>
     </div>
