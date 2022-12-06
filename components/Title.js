@@ -12,15 +12,27 @@ export default function Title() {
 
   const onSubmit = async () => {
     console.log('onSubmit')
+
+    let regexCheck = String(email.trim())
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+    if (!regexCheck) {
+      console.log('Not happening');
+      return;
+    }
+
+
     if (fetch) {
       await fetch('/api/sheets', {
         method: 'POST',
-        body: JSON.stringify({email}),
+        body: JSON.stringify({ email: email.trim() }),
         headers: {
           'Content-Type': 'application/json',
         },
       }).then((response) => response.json())
-      .then((data) => console.log(data));
+        .then((data) => console.log(data));
     }
   }
 
