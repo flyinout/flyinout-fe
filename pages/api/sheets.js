@@ -1,10 +1,13 @@
 import { google } from 'googleapis';
+import path from 'path';
+import { promises as fs } from 'fs';
+
 
 async function handler(req, res) {
     if (req.method === 'POST') {
 
         console.log(req.body);
-        const { email } = req.body;
+        const { email, linkedIn } = req.body;
 
         try {
 
@@ -47,11 +50,20 @@ async function handler(req, res) {
                     resource: {
                         // TODO: Add desired properties to the request body.
                         majorDimension: "ROWS",
-                        values: [[email]],
+                        values: [[email, linkedIn]],
                     },
                     //   auth: auth,
                 });
+
                 console.log("response after ", response)
+
+
+                // dummy code to get file. use another method to get file from frontend such as multer or busboy
+
+                const filePath = path.join(process.cwd(), 'public');
+                const file = await fs.readdir(filePath);
+                console.log("file is", file)
+                await fileUpload(file[0])
             }
 
 
@@ -63,6 +75,12 @@ async function handler(req, res) {
     } else {
         res.status(200).json({ message: 'Hey!' });
     }
+}
+
+async function fileUpload(file) {
+
+    // let fileName = path.basename(file)
+    console.log('uploading file', file.getName())
 
 }
 

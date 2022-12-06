@@ -23,11 +23,14 @@ export default function Title() {
       return;
     }
 
+    // defining dummy linkedIn
+    let linkedIn = 'changethis.linkedin'
+ 
 
     if (fetch) {
       await fetch('/api/sheets', {
         method: 'POST',
-        body: JSON.stringify({ email: email.trim() }),
+        body: JSON.stringify({ email: email.trim(), linkedIn: linkedIn.trim()}),
         headers: {
           'Content-Type': 'application/json',
         },
