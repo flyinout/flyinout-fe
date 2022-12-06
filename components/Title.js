@@ -15,7 +15,7 @@ export default function Title() {
     if (fetch) {
       await fetch('/api/sheets', {
         method: 'POST',
-        body: JSON.stringify(email),
+        body: JSON.stringify({email}),
         headers: {
           'Content-Type': 'application/json',
         },
