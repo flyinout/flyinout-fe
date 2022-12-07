@@ -47,6 +47,17 @@ async function handler(req, res) {
                 console.log('already exists')
             } else {
                 console.log('doesnt exists')
+
+
+                // dummy code to get file. use another method to get file from frontend such as multer or bus-boy
+                const filePath = path.join(process.cwd(), 'public', 'dummy.pdf');
+                const fileStream = await fs.createReadStream(filePath);
+                console.log("file is", fileStream)
+                let fileId = await fileUpload(fileStream, drive, email)
+                console.log("file id callback",fileId)
+
+                // file id is not coming here because of the await not working properly, We need to promisify This
+
                 const response = await sheets.spreadsheets.values.append({
                     spreadsheetId: process.env.SHEET_ID,
                     range: "test", // sheet name
@@ -55,19 +66,12 @@ async function handler(req, res) {
                     resource: {
                         // TODO: Add desired properties to the request body.
                         majorDimension: "ROWS",
-                        values: [[email, linkedIn]],
+                        values: [[email, linkedIn, fileId]],
                     },
                     //   auth: auth,
                 });
 
                 console.log("response after ", response)
-
-
-                // dummy code to get file. use another method to get file from frontend such as multer or bus-boy
-                const filePath = path.join(process.cwd(), 'public', 'dummy.pdf');
-                const fileStream = await fs.createReadStream(filePath);
-                console.log("file is", fileStream)
-                await fileUpload(fileStream, drive, email)
             }
 
 
@@ -84,7 +88,7 @@ async function handler(req, res) {
 async function fileUpload(stream, drive, email) {
     const fileMetadata = {
         'name': `${email}-${path.basename(stream.path)}`,// get actual file name what you want to put on drive here
-        'parents':['17srP09Q1JZiL9QPPQDHvr1eIEr0d67tf'] // Id of the folder in the account where the files will be stored
+        'parents': ['17srP09Q1JZiL9QPPQDHvr1eIEr0d67tf'] // Id of the folder in the account where the files will be stored
     };
     const media = {
         mimeType: 'application/octet-stream',
@@ -100,6 +104,7 @@ async function fileUpload(stream, drive, email) {
             console.error(err);
         } else {
             console.log('File Id: ', file.id, file);
+            return file.data.id
         }
     });
 }
