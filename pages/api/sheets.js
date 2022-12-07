@@ -1,6 +1,6 @@
 import { google } from 'googleapis';
 import path from 'path';
-import { promises as fs } from 'fs';
+import fs from 'fs';
 
 
 async function handler(req, res) {
@@ -28,6 +28,11 @@ async function handler(req, res) {
                 auth,
                 version: 'v4',
             });
+
+            const drive = google.drive({
+                auth,
+                version: 'v3',
+            })
 
             const emailsData = await sheets.spreadsheets.values.get({
                 spreadsheetId: process.env.SHEET_ID,
@@ -58,12 +63,11 @@ async function handler(req, res) {
                 console.log("response after ", response)
 
 
-                // dummy code to get file. use another method to get file from frontend such as multer or busboy
-
-                const filePath = path.join(process.cwd(), 'public');
-                const file = await fs.readdir(filePath);
-                console.log("file is", file)
-                await fileUpload(file[0])
+                // dummy code to get file. use another method to get file from frontend such as multer or bus-boy
+                const filePath = path.join(process.cwd(), 'public', 'dummy.pdf');
+                const fileStream = await fs.createReadStream(filePath);
+                console.log("file is", fileStream)
+                await fileUpload(fileStream, drive, email)
             }
 
 
@@ -77,11 +81,27 @@ async function handler(req, res) {
     }
 }
 
-async function fileUpload(file) {
-
-    // let fileName = path.basename(file)
-    console.log('uploading file', file.getName())
-
+async function fileUpload(stream, drive, email) {
+    const fileMetadata = {
+        'name': `${email}-${path.basename(stream.path)}`,// get actual file name what you want to put on drive here
+        'parents':['17srP09Q1JZiL9QPPQDHvr1eIEr0d67tf'] // Id of the folder in the account where the files will be stored
+    };
+    const media = {
+        mimeType: 'application/octet-stream',
+        body: stream
+    };
+    drive.files.create({
+        resource: fileMetadata,
+        media: media,
+        fields: 'id'
+    }, (err, file) => {
+        if (err) {
+            // Handle error
+            console.error(err);
+        } else {
+            console.log('File Id: ', file.id, file);
+        }
+    });
 }
 
 export default handler;
