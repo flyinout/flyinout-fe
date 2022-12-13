@@ -4,14 +4,16 @@ export default function ObjectiveSection() {
   return (
     <>
       <div className="text-center flex flex-col items-center mt-10 text-white">
-        <SectionHeading>Work Less <br/>Recruit More</SectionHeading>
+        <SectionHeading>
+          Work Less <br />
+          Recruit More
+        </SectionHeading>
         <SectionSubHeading>
-          FlyinOut helps you boost your Recruiting Productivity
-          at Any Scale
+          FlyinOut helps you boost your Recruiting Productivity at Any Scale
         </SectionSubHeading>
       </div>
 
-      <div className="my-8 relative flex flex-col sm:flex-row sm:items-stretch w-full px-4 pb-8 max-w-3xl mx-auto">
+      <div className="my-8 relative flex flex-col sm:flex-row sm:items-stretch w-full px-4 max-w-3xl mx-auto">
         <div
           className="flex rounded-lg  h-96 w-full"
           style={{
