@@ -19,7 +19,7 @@ export default function Landing() {
         <Automations />
         {/* <Imports /> */}
         {/* <Collaboration /> */}
-        {/* <EarlyBird /> */}
+        <EarlyBird />
         <Footer />
     </>
   );

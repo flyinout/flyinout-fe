@@ -3,7 +3,7 @@ import { Responsive } from "./ResponsiveWidth";
 
 export default function Footer() {
   return (
-      <footer className="text-center text-white mt-20 flex items-center">
+      <footer className="text-center text-white mt-10 flex items-center">
         <div className="h-30 w-full">
           <div id="productLogo" className="flex items-center justify-center">
             <Image
