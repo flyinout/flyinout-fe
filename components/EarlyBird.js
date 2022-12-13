@@ -39,14 +39,25 @@ export default function EarlyBird() {
             </div>
             <div className="flex items-center ">
               <Image src={CheckIcon} alt="Check" height={15} width={15} />{" "}
-              <span className="text-secondary ml-2">Subscription Discounts</span>
+              <span className="text-secondary ml-2">
+                Subscription Discounts
+              </span>
             </div>
           </div>
           <div className="-ml-4 mt-4 -mb-4">
             <Email />
           </div>
         </div>
-        <div className="absolute hidden md:block bg-white rounded-tl-xl md:h-5/6 md:w-5/12 right-0 bottom-0"></div>
+        <div
+          style={{
+            background: `url('${"./image.png"}')`,
+            width: "40%",
+            height: "68%",
+            backgroundRepeat:'no-repeat',
+            backgroundSize:'contain'
+          }}
+          className="absolute hidden md:block bg-white rounded-tl-xl md:h-5/6 md:w-5/12 right-0 bottom-0"
+        ></div>
       </div>
     </>
   );
