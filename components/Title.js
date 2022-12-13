@@ -1,52 +1,55 @@
 import { useState } from "react";
+import { SectionHeading, SectionSubHeading } from "./Hero";
+import { Responsive } from "./ResponsiveWidth";
 
 export default function Title() {
+  const [email, setEmail] = useState("");
 
-  const [email, setEmail] = useState('')
-
-  const handleEmailChange = (e) => {
-    console.log('console ', e)
-    setEmail(e)
-
-  }
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  };
 
   const onSubmit = async () => {
-    console.log('onSubmit')
     if (fetch) {
-      await fetch('/api/sheets', {
-        method: 'POST',
-        body: JSON.stringify({email}),
+      const resp = await fetch("/api/sheets", {
+        method: "POST",
+        body: JSON.stringify({ email }),
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-      }).then((response) => response.json())
-      .then((data) => console.log(data));
+      });
+      const json = await resp.json();
     }
-  }
+  };
 
   return (
-    <div className="text-center flex flex-col items-center mt-10 prose">
-      <button className="mb-4 btn btn-sm rounded-full normal-case text-amber-700 bg-orange-200">
-        Early Access
+    <div className="text-center flex flex-col items-center mt-10 text-white">
+      <button className="mb-4 btn btn-sm normal-case text-base text-primary rounded-lg px-4 bg-yellow-500 hover:bg-yellow-600 duration-300">
+        Beta Access
       </button>
-      <h1 className="my-2">The ultimate Modern Recruiting Platform</h1>
-      <p>
+      <SectionHeading>The Ultimate Modern Recruiting Platform</SectionHeading>
+      <SectionSubHeading>
         FlyinOut is not just your platform to find candiadtes we use state of
         the art machine learning technogies to close down on your recruitment
         needs.
-      </p>
-      <div className="flex items-center w-full mb-5">
-        <input
-          type="text"
-          value={email}
-          onChange={(e) => handleEmailChange(e.target.value)}
-          placeholder="Enter your email"
-          className="input input-primary w-full mx-4"
-        />
-        <button onClick={onSubmit} className="btn btn-primary normal-case grow-0">
-          Join the waitlist!
-        </button>
-      </div>
+      </SectionSubHeading>
+      <Responsive>
+        <div className="flex flex-col items-center w-full px-4 md:px-2 my-8 md:flex-row md:justify-center">
+          <input
+            type="text"
+            value={email}
+            onChange={handleEmailChange}
+            placeholder="Enter your email"
+            className="input input-bordered max-w-xs text-gray-900 w-full grow-1 px-2 mb-4 md:mb-0  md:mr-2"
+          />
+          <button
+            className="btn btn-primary normal-case md:ml-2"
+            onClick={onSubmit}
+          >
+            Join the waitlist!
+          </button>
+        </div>
+      </Responsive>
     </div>
   );
 }
