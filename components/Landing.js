@@ -17,8 +17,8 @@ export default function Landing() {
         <Illustration />
         <ObjectiveSection />
         <Automations />
-        {/* <Imports /> */}
-        {/* <Collaboration /> */}
+        <Imports />
+        <Collaboration />
         <EarlyBird />
         <Footer />
     </>
