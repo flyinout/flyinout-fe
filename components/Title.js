@@ -10,10 +10,24 @@ export default function Title() {
   };
 
   const onSubmit = async () => {
+    let regexCheck = String(email.trim())
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+    if (!regexCheck) {
+      console.log('Not happening');
+      return;
+    }
+
+    // defining dummy linkedIn
+    let linkedIn = 'changethis.linkedin'
+ 
+
     if (fetch) {
-      const resp = await fetch("/api/sheets", {
-        method: "POST",
-        body: JSON.stringify({ email }),
+      const resp = await fetch('/api/sheets', {
+        method: 'POST',
+        body: JSON.stringify({ email: email.trim(), linkedIn: linkedIn.trim()}),
         headers: {
           "Content-Type": "application/json",
         },
