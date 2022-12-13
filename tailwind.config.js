@@ -5,7 +5,13 @@ module.exports = {
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    dark:false,
+    extend: {
+      colors: {
+        primary: "#FFFFFF",
+        secondary: "#948DA9",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };
