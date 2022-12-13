@@ -14,13 +14,13 @@ export function Illustration() {
           marginRight: "-50vw",
         }}
       ></div>
-      <div className="bg-gray-800 h-full z-10 mt-8 sm:w-3/6 rounded-t-lg sm:rounded-none sm:rounded-l-lg">
+      <div className="bg-gray-800 h-full z-10 sm:w-3/6 rounded-t-lg sm:rounded-none sm:rounded-l-lg">
 
       </div>
-      <div className="bg-gray-400 h-full z-10 mt-8 sm:w-2/6 ">
+      <div className="bg-gray-400 h-full z-10 sm:w-2/6 ">
 
       </div>
-      <div className="bg-gray-50  h-full z-10 mt-8 sm:w-1/6 rounded-b-lg sm:rounded-none sm:rounded-r-lg">
+      <div className="bg-gray-50  h-full z-10 sm:w-1/6 rounded-b-lg sm:rounded-none sm:rounded-r-lg">
         
       </div>
     </div>
