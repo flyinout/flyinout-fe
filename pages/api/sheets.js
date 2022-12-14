@@ -4,7 +4,6 @@ import fs from "fs";
 
 async function handler(req, res) {
   if (req.method === "POST") {
-    console.log(req.body);
     const { email, linkedIn } = req.body;
 
     try {
@@ -35,7 +34,6 @@ async function handler(req, res) {
         spreadsheetId: process.env.SHEET_ID,
         range: "test!A:A", // sheet name
       });
-      console.log("response is", emailsData.data.values);
       let emails = emailsData.data.values;
       emailsData.data.values.forEach((row) => {
         emails.push(row[0]);

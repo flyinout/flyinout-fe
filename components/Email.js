@@ -24,7 +24,6 @@ export default function Email() {
         method: "POST",
         body: JSON.stringify({
           email: email.trim(),
-          linkedIn: linkedIn.trim(),
         }),
         headers: {
           "Content-Type": "application/json",
