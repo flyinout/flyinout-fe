@@ -3,5 +3,5 @@ export function SectionHeading({ children }) {
 }
 
 export function SectionSubHeading({ children }) {
-  return <p className="mt-2 sm:mt-4 text-secondary md:text-lg max-w-2xl shadow-sm">{children}</p>;
+  return <p className="mt-2 sm:mt-4 text-secondary md:text-xl max-w-2xl shadow-sm">{children}</p>;
 }

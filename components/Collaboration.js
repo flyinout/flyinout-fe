@@ -10,47 +10,98 @@ export default function Collaboration() {
           ease.
         </SectionSubHeading>
       </div>
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full">
+     
+      <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between w-full">
         <div
-          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left"
+          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md min-w-md"
           style={{ background: "#383440" }}
         >
           <div
             className="w-8 h-8 rounded-lg"
             style={{ background: "#948DA9" }}
           ></div>
-          <h3 className="text-md text-primary font-bold "> Manage</h3>
+          <h3 className="text-md text-primary font-bold ">Engaging</h3>
           <p className="text-secondary">
-            Manage fine grained access controls for your team. Set goals for
-            your team on a organization level.
+            Send eMails and InMails directly to your candidates.
           </p>
         </div>
         <div
-          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left"
+          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md"
           style={{ background: "#383440" }}
         >
           <div
             className="w-8 h-8 rounded-lg"
             style={{ background: "#948DA9" }}
           ></div>
-          <h3 className="text-md text-primary font-bold "> Manage</h3>
+          <h3 className="text-md text-primary font-bold ">
+            Interview Scheduling
+          </h3>
           <p className="text-secondary">
-            Manage fine grained access controls for your team. Set goals for
-            your team on a organization level.
+            Hassle free and blazing fast interview scheduling.
           </p>
         </div>
         <div
-          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left"
+          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md min-w-md"
           style={{ background: "#383440" }}
         >
           <div
             className="w-8 h-8 rounded-lg"
             style={{ background: "#948DA9" }}
           ></div>
-          <h3 className="text-md text-primary font-bold "> Manage</h3>
+          <h3 className="text-md text-primary font-bold ">Integration</h3>
           <p className="text-secondary">
-            Manage fine grained access controls for your team. Set goals for
-            your team on a organization level.
+            Integrate with third party applications for direct calls.
+          </p>
+        </div>
+      </div>
+      <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between w-full">
+        <div
+          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md min-w-md"
+          style={{ background: "#383440" }}
+        >
+          <div
+            className="w-8 h-8 rounded-lg"
+            style={{ background: "#948DA9" }}
+          ></div>
+          <h3 className="text-md text-primary font-bold ">
+            Customizable Search
+          </h3>
+          <p className="text-secondary">
+            Filter and search through the right candidates. Create custom job
+            postings and search for candidates based on specific criteria.
+          </p>
+        </div>
+        <div
+          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md min-w-md"
+          style={{ background: "#383440" }}
+        >
+          <div
+            className="w-8 h-8 rounded-lg"
+            style={{ background: "#948DA9" }}
+          ></div>
+          <h3 className="text-md text-primary font-bold ">
+            {" "}
+            Candidate Management
+          </h3>
+          <p className="text-secondary">
+            Best resume parsing functionality. Automated applicant tracking.
+          </p>
+        </div>
+        <div
+          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md min-w-md"
+          style={{ background: "#383440" }}
+        >
+          <div
+            className="w-8 h-8 rounded-lg"
+            style={{ background: "#948DA9" }}
+          ></div>
+          <h3 className="text-md text-primary font-bold ">
+            {" "}
+            Reporting and Analytics
+          </h3>
+          <p className="text-secondary">
+            Genereate reports, metrics and analysis instantenously to make easy
+            data driven decisions.
           </p>
         </div>
       </div>

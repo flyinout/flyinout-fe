@@ -11,7 +11,8 @@ export default function EarlyBird() {
         <SectionHeading>Built for Product and Tech</SectionHeading>
         <SectionSubHeading>
           Specifically designed for recruiting people for Technical and Product
-          related roles
+          roles. Helping you soar to success with the right hire.
+          <br /> Bringing the best together!
         </SectionSubHeading>
       </div>
       <div
@@ -53,8 +54,8 @@ export default function EarlyBird() {
             background: `url('${"./image.png"}')`,
             width: "40%",
             height: "68%",
-            backgroundRepeat:'no-repeat',
-            backgroundSize:'contain'
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "contain",
           }}
           className="absolute hidden md:block bg-white rounded-tl-xl md:h-5/6 md:w-5/12 right-0 bottom-0"
         ></div>

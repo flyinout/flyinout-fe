@@ -1,5 +1,6 @@
 import DottedBg from "../public/DottedBg.svg";
 import IphoneMock from "../public/iPhoneMockup.png";
+import IPadMock from "../public/iPadMockup.png";
 import { Image } from "../utils/imageLoader";
 import Email from "./Email";
 import { SectionHeading, SectionSubHeading } from "./Hero";
@@ -25,7 +26,8 @@ export function Illustration() {
       ></div>
       <div className="mt-40 text-center sm:mt-0 sm:flex sm:flex-col sm:justify-center sm:items-center z-20">
         <SectionHeading>
-          Get an early bird access <br />for the product now!
+        Get the inside scoop on the best job opportunities <br />
+        Sign up for early bird access now!
         </SectionHeading>
         <SectionSubHeading>
           We solve every recruitment problem you ever faced!<br ></br>
@@ -37,7 +39,7 @@ export function Illustration() {
         
       >
         <div className="absolute  right-0">
-          <Image src={IphoneMock} alt="Screen" width={300} height={600}></Image>
+          <Image src={IPadMock} alt="Screen" width={450} height={600}></Image>
         </div>
       </div>
     </div>

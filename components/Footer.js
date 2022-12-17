@@ -1,13 +1,13 @@
 import { Image } from "../utils/imageLoader";
 import { Responsive } from "./ResponsiveWidth";
-
+import ProductLogo from "../public/ProductLogo.png";
 export default function Footer() {
   return (
       <footer className="text-center text-white mt-10 flex items-center">
         <div className="h-30 w-full">
           <div id="productLogo" className="flex items-center justify-center">
             <Image
-              src="https://cdn.dribbble.com/users/3028563/screenshots/17652849/media/a786e40bccabd30d4113bfd36cd1200d.jpg"
+              src={ProductLogo}
               alt="Logo"
               height={25}
               width={25}

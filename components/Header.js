@@ -1,5 +1,6 @@
 import { Image } from "../utils/imageLoader";
 import { Responsive } from "./ResponsiveWidth";
+import ProductLogo from "../public/ProductLogo.png";
 
 import { useState } from "react";
 export default function Header() {
@@ -14,15 +15,15 @@ export default function Header() {
     <header>
       <nav className="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 md:px-48">
         <div id="productLogo" className="flex items-center">
-          <Image
-            src="https://cdn.dribbble.com/users/3028563/screenshots/17652849/media/a786e40bccabd30d4113bfd36cd1200d.jpg"
-            alt="Logo"
-            height={25}
-            width={25}
-          />
-          <h2 className="text-gray-50 font-bold text-base md:text-lg ml-2">
-            FlyinOut
-          </h2>
+          <Image src={ProductLogo} alt="Logo" height={25} width={25} />
+          <div className="flex flex-col">
+            <h2 className="text-gray-50 font-bold text-base md:text-lg ml-2 mb-0">
+              FlyinOut
+            </h2>
+            <span className=" ml-2 " style={{ fontSize: "0.75rem" }}>
+              Where talent takes fight
+            </span>
+          </div>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

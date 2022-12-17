@@ -16,7 +16,7 @@ export default function Landing() {
         <Header />
         <Title />
         <Illustration />
-        <Features />
+        {/* <Features /> */}
         <ObjectiveSection />
         <Automations />
         {/* <Imports /> */}
