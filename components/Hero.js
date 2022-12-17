@@ -1,5 +1,5 @@
 export function SectionHeading({ children }) {
-  return <h1 className="mt-2 sm:mt-4 text-primary text-xl font-extrabold md:text-4xl max-w-md">{children}</h1>;
+  return <h1 className="mt-2 sm:mt-4 text-primary text-xl font-extrabold md:text-4xl">{children}</h1>;
 }
 
 export function SectionSubHeading({ children }) {

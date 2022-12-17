@@ -5,7 +5,7 @@ export default function ObjectiveSection() {
     <>
       <div className="text-center flex flex-col items-center mt-10 text-white">
         <SectionHeading>
-          Work Less <br />
+          Work Less
           Recruit More
         </SectionHeading>
         <SectionSubHeading>
