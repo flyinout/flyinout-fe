@@ -1,5 +1,5 @@
 import { SectionHeading, SectionSubHeading } from "./Hero";
-
+import DesktopView from "../public/desktopView.png";
 export default function ObjectiveSection() {
   return (
     <>
@@ -21,7 +21,9 @@ export default function ObjectiveSection() {
               "linear-gradient(77.79deg, #5C70F4 -5.75%, #9347E7 111.09%)",
           }}
         >
-          <h2 className="text-primary text-base font-bold">Blazingly Fast Search</h2>
+          <h2 className="text-primary text-base font-bold">
+            Blazingly Fast Search
+          </h2>
           <h3 className="text-primary text-xs font-bold w-full lg:w-1/4 my-4">
             Once you have imported your candidates, jobs and companies, you can
             perform complicated searches with filters at incredible speeds.
@@ -33,9 +35,12 @@ export default function ObjectiveSection() {
             top: " 50%",
             right: "-5rem",
             bottom: "50%",
-            width: "70%",
+            width: "50%",
             transform: "translateY(-50%)",
             background: " #151515",
+            backgroundImage: `url(${DesktopView.src})`,
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
             border: "1px solid rgba(148, 141, 169, 0.35)",
             boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
             borderRadius: "8px",
