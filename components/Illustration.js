@@ -24,22 +24,29 @@ export function Illustration() {
           marginRight: "-50vw",
         }}
       ></div>
-      <div className="mt-40 text-center sm:mt-0 sm:flex sm:flex-col sm:justify-center sm:items-center z-20">
+      <div className="text-center w-full sm:flex sm:flex-col sm:justify-center sm:items-center z-20">
         <SectionHeading>
-        Get the inside scoop on the best job opportunities <br />
-        Sign up for early bird access now!
+          Get the inside scoop on the best job opportunities <br />
+          Sign up for early bird access now!
         </SectionHeading>
         <SectionSubHeading>
-          We solve every recruitment problem you ever faced!<br ></br>
+          We solve every recruitment problem you ever faced!<br></br>
           We integrate to your existent CRMs, databases and much more!
         </SectionSubHeading>
       </div>
-      <div
-        className="relative bg-transparent w-1/3 z-10 overflow-hidden"
-        
-      >
-        <div className="absolute  right-0">
-          <Image src={IPadMock} alt="Screen" width={450} height={600}></Image>
+      <div className="md:block lg:hidden relative bg-transparent w-1/3 z-10 overflow-hidden">
+        <div className="absolute right-0 top-20">
+          <Image src={IphoneMock} alt="Screen" width={400} height={800}></Image>
+        </div>
+      </div>
+      <div className="hidden lg:block xl:hidden relative bg-transparent w-2/3 z-10 overflow-hidden">
+        <div className="absolute right-0 top-0 translate-y-32">
+          <Image src={IPadMock} alt="Screen" width={800} height={500}></Image>
+        </div>
+      </div>
+      <div className="hidden xl:block relative bg-transparent w-2/3 z-10 overflow-hidden">
+        <div className="absolute right-0 top-0">
+          <Image src={IPadMock} alt="Screen" width={800} height={500}></Image>
         </div>
       </div>
     </div>
