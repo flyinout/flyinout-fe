@@ -1,0 +1,22 @@
+.collaborationWrapper {
+    display: grid;
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: minmax(5rem, 1fr) 1fr; 
+    grid-gap: 3rem 1rem;
+    padding: 1rem 1rem;
+}
+
+.right {
+    justify-self: end;
+    align-self: end;
+}
+
+.left {
+    justify-self: start;
+    align-self: end;
+}
+.center {
+    justify-self: center;
+    align-self: end;
+}

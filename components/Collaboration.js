@@ -1,4 +1,5 @@
 import { SectionHeading, SectionSubHeading } from "./Hero";
+import styles from "../styles/Collaboration.module.scss";
 
 export default function Collaboration() {
   return (
@@ -10,30 +11,21 @@ export default function Collaboration() {
           ease.
         </SectionSubHeading>
       </div>
-     
-      <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between w-full">
+      <div className={styles.collaborationWrapper}>
         <div
-          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md min-w-md"
-          style={{ background: "#383440" }}
+          className={"p-4 rounded-lg text-left w-full " + `${styles.right}`}
+          style={{ background: "#383440", maxWidth: "20rem", minHeight: "8rem" }}
         >
-          <div
-            className="w-8 h-8 rounded-lg"
-            style={{ background: "#948DA9" }}
-          ></div>
-          <h3 className="text-md text-primary font-bold ">Engaging</h3>
+          <h3 className="text-md text-primary font-bold">Engaging</h3>
           <p className="text-secondary">
             Send eMails and InMails directly to your candidates.
           </p>
         </div>
         <div
-          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md"
-          style={{ background: "#383440" }}
+          className={"p-4 rounded-lg text-left w-full " + `${styles.center}`}
+          style={{ background: "#383440", maxWidth: "20rem", minHeight: "8rem" }}
         >
-          <div
-            className="w-8 h-8 rounded-lg"
-            style={{ background: "#948DA9" }}
-          ></div>
-          <h3 className="text-md text-primary font-bold ">
+          <h3 className="text-md text-primary font-bold">
             Interview Scheduling
           </h3>
           <p className="text-secondary">
@@ -41,29 +33,19 @@ export default function Collaboration() {
           </p>
         </div>
         <div
-          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md min-w-md"
-          style={{ background: "#383440" }}
+          className={"p-4 rounded-lg text-left w-full " + `${styles.left}`}
+          style={{ background: "#383440", maxWidth: "20rem", minHeight: "8rem" }}
         >
-          <div
-            className="w-8 h-8 rounded-lg"
-            style={{ background: "#948DA9" }}
-          ></div>
-          <h3 className="text-md text-primary font-bold ">Integration</h3>
+          <h3 className="text-md text-primary font-bold">Integration</h3>
           <p className="text-secondary">
             Integrate with third party applications for direct calls.
           </p>
         </div>
-      </div>
-      <div className="flex flex-col items-center md:flex-row md:items-center md:justify-between w-full">
         <div
-          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md min-w-md"
-          style={{ background: "#383440" }}
+          className={"p-4 rounded-lg text-left h-full w-full " + `${styles.right}`}
+          style={{ background: "#383440", maxWidth: "20rem", minHeight: "10rem" }}
         >
-          <div
-            className="w-8 h-8 rounded-lg"
-            style={{ background: "#948DA9" }}
-          ></div>
-          <h3 className="text-md text-primary font-bold ">
+          <h3 className="text-md text-primary font-bold">
             Customizable Search
           </h3>
           <p className="text-secondary">
@@ -72,15 +54,10 @@ export default function Collaboration() {
           </p>
         </div>
         <div
-          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md min-w-md"
-          style={{ background: "#383440" }}
+          className={"p-4 rounded-lg text-left h-full w-full " + `${styles.center}`}
+          style={{ background: "#383440", maxWidth: "20rem", minHeight: "10rem" }}
         >
-          <div
-            className="w-8 h-8 rounded-lg"
-            style={{ background: "#948DA9" }}
-          ></div>
-          <h3 className="text-md text-primary font-bold ">
-            {" "}
+          <h3 className="text-md text-primary font-bold">
             Candidate Management
           </h3>
           <p className="text-secondary">
@@ -88,15 +65,10 @@ export default function Collaboration() {
           </p>
         </div>
         <div
-          className="my-2 mx-4 p-8 md:mx-8 rounded-lg text-left max-w-md min-w-md"
-          style={{ background: "#383440" }}
+          className={"p-4 rounded-lg text-left h-full w-full " + `${styles.left}`}
+          style={{ background: "#383440", maxWidth: "20rem", minHeight: "10rem" }}
         >
-          <div
-            className="w-8 h-8 rounded-lg"
-            style={{ background: "#948DA9" }}
-          ></div>
-          <h3 className="text-md text-primary font-bold ">
-            {" "}
+          <h3 className="text-md text-primary font-bold">
             Reporting and Analytics
           </h3>
           <p className="text-secondary">
