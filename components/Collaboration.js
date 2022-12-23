@@ -20,7 +20,13 @@ const variant = {
     scale: [1.1, 1],
     backgroundColor: "rgb(56, 52, 64)",
     boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
-    filter: [`blur(0px)`,`blur(0.7px)`, `blur(0.5px)`, `blur(0.2px)`,`blur(1px)`],
+    filter: [
+      `blur(0px)`,
+      `blur(0.7px)`,
+      `blur(0.5px)`,
+      `blur(0.2px)`,
+      `blur(1px)`,
+    ],
     transition: {
       delay: 0.5,
       duration: 1,
@@ -45,7 +51,8 @@ export default function Collaboration() {
     return () => clearInterval(interval);
   });
 
-  const togglePause = () => {
+  const togglePause = (index) => {
+    if (index || index == 0) setIndex(index);
     setPaused(!paused);
   };
 
@@ -60,13 +67,13 @@ export default function Collaboration() {
       </div>
       <div className={styles.collaborationWrapper}>
         <motion.div
-          onMouseEnter={togglePause}
+          onMouseEnter={() => togglePause(0)}
           onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
           animate={index == 0 ? "raise" : "lower"}
           className={
-            "overflow-hidden p-4 rounded-lg text-left w-full " +
+            "cursor-pointer overflow-hidden p-4 rounded-lg text-left w-full " +
             `${styles.right}`
           }
           style={{
@@ -82,13 +89,13 @@ export default function Collaboration() {
           </p>
         </motion.div>
         <motion.div
-          onMouseEnter={togglePause}
+          onMouseEnter={() => togglePause(1)}
           onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
           animate={index == 1 ? "raise" : "lower"}
           className={
-            "overflow-hidden p-4 rounded-lg text-left w-full " +
+            "cursor-pointer overflow-hidden p-4 rounded-lg text-left w-full " +
             `${styles.center}`
           }
           style={{
@@ -106,13 +113,13 @@ export default function Collaboration() {
           </p>
         </motion.div>
         <motion.div
-          onMouseEnter={togglePause}
+          onMouseEnter={() => togglePause(2)}
           onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
           animate={index == 2 ? "raise" : "lower"}
           className={
-            "overflow-hidden p-4 rounded-lg text-left w-full " +
+            "cursor-pointer overflow-hidden p-4 rounded-lg text-left w-full " +
             `${styles.left}`
           }
           style={{
@@ -128,13 +135,13 @@ export default function Collaboration() {
           </p>
         </motion.div>
         <motion.div
-          onMouseEnter={togglePause}
+          onMouseEnter={() => togglePause(3)}
           onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
           animate={index == 3 ? "raise" : "lower"}
           className={
-            "overflow-hidden p-4 rounded-lg text-left h-full w-full " +
+            "cursor-pointer overflow-hidden p-4 rounded-lg text-left h-full w-full " +
             `${styles.right}`
           }
           style={{
@@ -153,13 +160,13 @@ export default function Collaboration() {
           </p>
         </motion.div>
         <motion.div
-          onMouseEnter={togglePause}
+          onMouseEnter={() => togglePause(4)}
           onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
           animate={index == 4 ? "raise" : "lower"}
           className={
-            "overflow-hidden p-4 rounded-lg text-left h-full w-full " +
+            "cursor-pointer overflow-hidden p-4 rounded-lg text-left h-full w-full " +
             `${styles.center}`
           }
           style={{
@@ -177,13 +184,13 @@ export default function Collaboration() {
           </p>
         </motion.div>
         <motion.div
-          onMouseEnter={togglePause}
+          onMouseEnter={() => togglePause(5)}
           onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
           animate={index == 5 ? "raise" : "lower"}
           className={
-            "overflow-hidden p-4 rounded-lg text-left h-full w-full " +
+            "cursor-pointer overflow-hidden p-4 rounded-lg text-left h-full w-full " +
             `${styles.left}`
           }
           style={{
