@@ -1,23 +1,54 @@
 import { SectionHeading, SectionSubHeading } from "./Hero";
 import styles from "../styles/Collaboration.module.scss";
 import { motion, useTransform } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 const variant = {
   rest: {
     filter: `blur(1px)`,
-    scale: 1,
   },
   raise: {
-    scale: 1.1,
+    scale: [1, 1.1],
     backgroundColor: "rgb(157, 151, 170)",
     boxShadow: "9px 10px 24px 15px rgba(26,22,26,1)",
     filter: [`blur(1px)`, `blur(0.5px)`, `blur(0px)`],
+    transition: {
+      delay: 0.5,
+      duration: 1,
+    },
+  },
+  lower: {
+    scale: [1.1, 1],
+    backgroundColor: "rgb(56, 52, 64)",
+    boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
+    filter: [`blur(0px)`,`blur(0.7px)`, `blur(0.5px)`, `blur(0.2px)`,`blur(1px)`],
+    transition: {
+      delay: 0.5,
+      duration: 1,
+    },
   },
 };
 
 export default function Collaboration() {
-  const scale = 1.1;
-  const [isHover, setIsHover] = useState(false);
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!paused) {
+        if (index < 6) {
+          setIndex(index + 1);
+        } else {
+          setIndex(0);
+        }
+      }
+    }, 3000);
+    return () => clearInterval(interval);
+  });
+
+  const togglePause = () => {
+    setPaused(!paused);
+  };
+
   return (
     <>
       <div className="text-center flex flex-col w-full items-center mt-10 mb-8 ">
@@ -29,15 +60,18 @@ export default function Collaboration() {
       </div>
       <div className={styles.collaborationWrapper}>
         <motion.div
+          onMouseEnter={togglePause}
+          onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
-          whileHover="raise"
+          animate={index == 0 ? "raise" : "lower"}
           className={
             "overflow-hidden p-4 rounded-lg text-left w-full " +
             `${styles.right}`
           }
           style={{
             background: "#383440",
+            boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "8rem",
           }}
@@ -48,15 +82,18 @@ export default function Collaboration() {
           </p>
         </motion.div>
         <motion.div
+          onMouseEnter={togglePause}
+          onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
-          whileHover="raise"
+          animate={index == 1 ? "raise" : "lower"}
           className={
             "overflow-hidden p-4 rounded-lg text-left w-full " +
             `${styles.center}`
           }
           style={{
             background: "#383440",
+            boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "8rem",
           }}
@@ -69,15 +106,18 @@ export default function Collaboration() {
           </p>
         </motion.div>
         <motion.div
+          onMouseEnter={togglePause}
+          onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
-          whileHover="raise"
+          animate={index == 2 ? "raise" : "lower"}
           className={
             "overflow-hidden p-4 rounded-lg text-left w-full " +
             `${styles.left}`
           }
           style={{
             background: "#383440",
+            boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "8rem",
           }}
@@ -88,15 +128,18 @@ export default function Collaboration() {
           </p>
         </motion.div>
         <motion.div
+          onMouseEnter={togglePause}
+          onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
-          whileHover="raise"
+          animate={index == 3 ? "raise" : "lower"}
           className={
             "overflow-hidden p-4 rounded-lg text-left h-full w-full " +
             `${styles.right}`
           }
           style={{
             background: "#383440",
+            boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "10rem",
           }}
@@ -110,15 +153,18 @@ export default function Collaboration() {
           </p>
         </motion.div>
         <motion.div
+          onMouseEnter={togglePause}
+          onMouseLeave={togglePause}
           variants={variant}
           initial="rest"
-          whileHover="raise"
+          animate={index == 4 ? "raise" : "lower"}
           className={
             "overflow-hidden p-4 rounded-lg text-left h-full w-full " +
             `${styles.center}`
           }
           style={{
             background: "#383440",
+            boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "10rem",
           }}
@@ -131,15 +177,18 @@ export default function Collaboration() {
           </p>
         </motion.div>
         <motion.div
-          initial="rest"
-          whileHover="raise"
+          onMouseEnter={togglePause}
+          onMouseLeave={togglePause}
           variants={variant}
+          initial="rest"
+          animate={index == 5 ? "raise" : "lower"}
           className={
             "overflow-hidden p-4 rounded-lg text-left h-full w-full " +
             `${styles.left}`
           }
           style={{
             background: "#383440",
+            boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "10rem",
           }}
