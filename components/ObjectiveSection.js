@@ -8,7 +8,6 @@ import {
 
 const ObjectiveSection = () => {
   const { scrollYProgress } = useViewportScroll();
-  const textX = useTransform(scrollYProgress, [0, 1], [0, -900]);
   const imageX = useTransform(scrollYProgress, [0, 1], [1, 100]);
   return (
     <>
