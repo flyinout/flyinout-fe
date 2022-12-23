@@ -20,3 +20,23 @@
     justify-self: center;
     align-self: end;
 }
+
+@media screen and (max-width: 500px) {
+    .collaborationWrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .right {
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .left {
+        justify-self: center;
+        align-self: center;
+    }
+    .center {
+        justify-self: center;
+        align-self: center;
+    }
+}
