@@ -41,26 +41,37 @@ export default function EarlyBird() {
           transition={{ delay: 0.5, duration: 1 }}
           className="md:w-1/2 w-full p-4"
         >
-          <h1 className="text-lg font-bold my-2 text-primary">Join Early</h1>
-          <p className="text-secondary">
+          <motion.h1 whileHover={{ scale: 1.1 }} className="text-lg font-bold my-2 text-primary">
+            Join Early
+          </motion.h1>
+          <motion.p whileHover={{ scale: 1.1 }} className="text-secondary">
             Specifically designed for recruiting people for Technical and
             Product related roles.
-          </p>
+          </motion.p>
           <div className="mt-2">
-            <div className="flex items-center ">
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="flex items-center "
+            >
               <Image src={CheckIcon} alt="Check" height={15} width={15} />{" "}
               <span className="text-secondary ml-2"> Product Updates</span>
-            </div>
-            <div className="flex items-center ">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="flex items-center "
+            >
               <Image src={CheckIcon} alt="Check" height={15} width={15} />{" "}
               <span className="text-secondary ml-2">Early Access</span>
-            </div>
-            <div className="flex items-center ">
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.1 }}
+              className="flex items-center "
+            >
               <Image src={CheckIcon} alt="Check" height={15} width={15} />{" "}
               <span className="text-secondary ml-2">
                 Subscription Discounts
               </span>
-            </div>
+            </motion.div>
           </div>
           <div className="-ml-4 mt-4 -mb-4">
             <Email />
