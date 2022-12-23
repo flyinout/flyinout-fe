@@ -35,9 +35,9 @@ export default function Email() {
   };
   return (
     <Responsive>
-      <motion.div className="flex flex-col items-center w-full px-4 md:px-2 my-8 md:flex-row md:justify-center">
+      <motion.div className="flex flex-col items-center w-full px-4 md:px-2 my-8 md:flex-row md:justify-evenly">
         <motion.div
-          className="w-full mr-2"
+          className="w-full md:w-1/2"
           whileHover={{
             scale: [1, 1.1],
             duration: 0.8,
@@ -49,7 +49,7 @@ export default function Email() {
             value={email}
             onChange={handleEmailChange}
             placeholder="Enter your email"
-            className="input input-bordered max-w-md text-white placeholder-white w-full grow-1 px-2 mb-4 md:mb-0  md:mr-2"
+            className="input input-bordered max-w-md bg-white text-gray-700 placeholder-gray-700 w-full grow-1 px-2 mb-4 md:mb-0  md:mr-2"
           />
         </motion.div>
         <motion.button
