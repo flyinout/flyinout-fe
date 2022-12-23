@@ -3,6 +3,18 @@ import Email from "./Email";
 import { SectionHeading, SectionSubHeading } from "./Hero";
 import { Responsive } from "./ResponsiveWidth";
 import CheckIcon from "../public/checkIcon.svg";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const variants = {
+  offscreen: {
+    x: "-100vw",
+  },
+  onscreen: {
+    x: 0,
+    transition: { delay: 0.5, duration: 1 },
+  },
+};
 
 export default function EarlyBird() {
   return (
@@ -23,7 +35,12 @@ export default function EarlyBird() {
           border: "1px solid rgba(148, 141, 169, 0.35)",
         }}
       >
-        <div className="md:w-1/2 w-full p-4">
+        <motion.div
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="md:w-1/2 w-full p-4"
+        >
           <h1 className="text-lg font-bold my-2 text-primary">Join Early</h1>
           <p className="text-secondary">
             Specifically designed for recruiting people for Technical and
@@ -48,8 +65,11 @@ export default function EarlyBird() {
           <div className="-ml-4 mt-4 -mb-4">
             <Email />
           </div>
-        </div>
-        <div
+        </motion.div>
+        <motion.div
+          initial={{ x: "100vw", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 1 }}
           style={{
             background: `url('${"./image.png"}')`,
             width: "40%",
@@ -58,7 +78,7 @@ export default function EarlyBird() {
             backgroundSize: "contain",
           }}
           className="absolute hidden md:block bg-white rounded-tl-xl md:h-5/6 md:w-5/12 right-0 bottom-0"
-        ></div>
+        ></motion.div>
       </div>
     </>
   );
