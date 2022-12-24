@@ -21,7 +21,7 @@ export default function Header() {
               FlyinOut
             </h2>
             <span className=" ml-2 " style={{ fontSize: "0.75rem" }}>
-              Where talent takes fight
+              Where talent takes flight
             </span>
           </div>
         </div>
