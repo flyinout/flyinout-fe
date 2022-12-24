@@ -22,7 +22,7 @@ export default function Header() {
             <h2 className="text-gray-50 font-bold text-base md:text-lg ml-2 mb-0">
               FlyinOut
             </h2>
-            <span className=" ml-2 " style={{ fontSize: "0.75rem" }}>
+            <span className="text-secondary ml-2 " style={{ fontSize: "0.8rem" }}>
               Where talent takes flight
             </span>
           </div>
