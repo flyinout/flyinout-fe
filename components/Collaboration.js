@@ -14,15 +14,16 @@ import {
 import {} from "@fortawesome/fontawesome-free-regular";
 import {} from "@fortawesome/free-brands-svg-icons";
 
+const initalBG =
+  "rgb(92, 112, 244)";
+  const finalBG = "rgb(147, 71, 231)"
 const variant = {
   rest: {
-    filter: `blur(1px)`,
   },
   raise: {
-    scale: [1, 1.1],
-    backgroundColor: "rgb(157, 151, 170)",
+    scale: [1, 1.25],
+    backgroundColor: finalBG,
     boxShadow: "9px 10px 24px 15px rgba(26,22,26,1)",
-    filter: [`blur(1px)`, `blur(0.5px)`, `blur(0px)`],
     transition: {
       delay: 0,
       duration: 0.5,
@@ -30,15 +31,8 @@ const variant = {
   },
   lower: {
     scale: [1.1, 1],
-    backgroundColor: "rgb(56, 52, 64)",
+    backgroundColor: initalBG,
     boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
-    filter: [
-      `blur(0px)`,
-      `blur(0.7px)`,
-      `blur(0.5px)`,
-      `blur(0.2px)`,
-      `blur(1px)`,
-    ],
     transition: {
       delay: 0,
       duration: 0.5,
@@ -89,7 +83,7 @@ export default function Collaboration() {
             `${styles.right}`
           }
           style={{
-            background: "#383440",
+            background: initalBG,
             boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "8rem",
@@ -116,7 +110,7 @@ export default function Collaboration() {
             `${styles.center}`
           }
           style={{
-            background: "#383440",
+            background: initalBG,
             boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "8rem",
@@ -143,7 +137,7 @@ export default function Collaboration() {
             `${styles.left}`
           }
           style={{
-            background: "#383440",
+            background: initalBG,
             boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "8rem",
@@ -170,7 +164,7 @@ export default function Collaboration() {
             `${styles.right}`
           }
           style={{
-            background: "#383440",
+            background: initalBG,
             boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "10rem",
@@ -198,7 +192,7 @@ export default function Collaboration() {
             `${styles.center}`
           }
           style={{
-            background: "#383440",
+            background: initalBG,
             boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "10rem",
@@ -225,7 +219,7 @@ export default function Collaboration() {
             `${styles.left}`
           }
           style={{
-            background: "#383440",
+            background: initalBG,
             boxShadow: "0 0 0 5px rgba(26,22,26,0.6)",
             maxWidth: "20rem",
             minHeight: "10rem",
