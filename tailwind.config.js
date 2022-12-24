@@ -5,11 +5,14 @@ module.exports = {
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    dark:false,
+    dark: false,
     extend: {
       colors: {
         primary: "#FFFFFF",
         secondary: "#948DA9",
+      },
+      fontSize: {
+        '4xl':'1.9rem',
       },
     },
   },
