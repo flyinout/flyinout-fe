@@ -53,7 +53,7 @@ export default function Collaboration() {
   useEffect(() => {
     const interval = setInterval(() => {
       if (!paused) {
-        if (index < 6) {
+        if (index < 5) {
           setIndex(index + 1);
         } else {
           setIndex(0);
