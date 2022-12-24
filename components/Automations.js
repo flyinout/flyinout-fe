@@ -1,5 +1,6 @@
 import { Image } from "../utils/imageLoader";
 import { Responsive } from "./ResponsiveWidth";
+import ProductLogo from "../public/ProductLogo.png";
 
 export default function Automations() {
   return (
@@ -30,17 +31,14 @@ export default function Automations() {
       >
         <div className="px-10">
           <div className="flex items-center">
-            <Image
-              src="https://cdn.dribbble.com/users/3028563/screenshots/17652849/media/a786e40bccabd30d4113bfd36cd1200d.jpg"
-              alt="Logo"
-              height={25}
-              width={25}
-            />
+            <Image src={ProductLogo} alt="Logo" height={25} width={25} />
             <h2 className="text-gray-50 font-bold text-base md:text-lg ml-2">
               FlyinOut
             </h2>
           </div>
-          <h3 className="font-bold text-2xl text-primary mt-3 mb-6">Email Template</h3>
+          <h3 className="font-bold text-2xl text-primary mt-3 mb-6">
+            Email Template
+          </h3>
           <p className=" text-secondary text-md mb-6">
             Customizable templates for your emails helping you in a{" "}
             <span className="font-bold underline"> faster </span>

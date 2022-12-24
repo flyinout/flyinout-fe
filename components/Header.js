@@ -46,7 +46,7 @@ export default function Header() {
             isMenuShown ? "" : "hidden"
           }`}
         >
-          <ul className="pt-4 text-base md:flex md:justify-between md:pt-0">
+          <ul className="pt-4 text-base text-white font-extrabold md:flex md:justify-between md:pt-0">
             <li>
               <a className="md:p-4 py-2 block " href="#">
                 Privacy
@@ -58,7 +58,7 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a className="md:p-4 py-2 block " href="#">
+              <a href="mailto:founders.flyinout@gmail.com" className="md:p-4 py-2 block " >
                 Contact
               </a>
             </li>
