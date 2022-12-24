@@ -1,8 +1,10 @@
 import { Image } from "../utils/imageLoader";
 import { Responsive } from "./ResponsiveWidth";
 import ProductLogo from "../public/ProductLogo.png";
-
+import Icon from "./Icon";
 import { useState } from "react";
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+
 export default function Header() {
   const [isMenuShown, setIsMenuShown] = useState(false);
 
@@ -58,7 +60,10 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="mailto:founders.flyinout@gmail.com" className="md:p-4 py-2 block " >
+              <a
+                href="mailto:founders.flyinout@gmail.com"
+                className="md:p-4 py-2 block "
+              >
                 Contact
               </a>
             </li>

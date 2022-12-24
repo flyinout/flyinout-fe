@@ -2,6 +2,18 @@ import { SectionHeading, SectionSubHeading } from "./Hero";
 import styles from "../styles/Collaboration.module.scss";
 import { motion, useTransform } from "framer-motion";
 import { useState, useEffect } from "react";
+import Icon from "./Icon";
+import {
+  faHandshake,
+  faObjectGroup,
+  faMagnifyingGlass,
+  faChartSimple,
+  faCalendar,
+  faUserGroup,
+} from "@fortawesome/free-solid-svg-icons";
+import {} from "@fortawesome/fontawesome-free-regular";
+import {} from "@fortawesome/free-brands-svg-icons";
+
 const variant = {
   rest: {
     filter: `blur(1px)`,
@@ -12,8 +24,8 @@ const variant = {
     boxShadow: "9px 10px 24px 15px rgba(26,22,26,1)",
     filter: [`blur(1px)`, `blur(0.5px)`, `blur(0px)`],
     transition: {
-      delay: 0.5,
-      duration: 1,
+      delay: 0,
+      duration: 0.5,
     },
   },
   lower: {
@@ -28,8 +40,8 @@ const variant = {
       `blur(1px)`,
     ],
     transition: {
-      delay: 0.5,
-      duration: 1,
+      delay: 0,
+      duration: 0.5,
     },
   },
 };
@@ -68,7 +80,7 @@ export default function Collaboration() {
       <div className={styles.collaborationWrapper}>
         <motion.div
           onMouseEnter={() => togglePause(0)}
-          onMouseLeave={togglePause}
+          onMouseLeave={() => togglePause()}
           variants={variant}
           initial="rest"
           animate={index == 0 ? "raise" : "lower"}
@@ -83,14 +95,19 @@ export default function Collaboration() {
             minHeight: "8rem",
           }}
         >
-          <h3 className="text-md text-primary font-bold">Engaging</h3>
+          <h3 className="text-md text-primary font-bold flex items-center">
+            <span className="mr-2">
+              <Icon icon={faHandshake} size="2x" />
+            </span>
+            Engaging
+          </h3>
           <p className="text-primary">
             Send eMails and InMails directly to your candidates.
           </p>
         </motion.div>
         <motion.div
           onMouseEnter={() => togglePause(1)}
-          onMouseLeave={togglePause}
+          onMouseLeave={() => togglePause()}
           variants={variant}
           initial="rest"
           animate={index == 1 ? "raise" : "lower"}
@@ -105,7 +122,10 @@ export default function Collaboration() {
             minHeight: "8rem",
           }}
         >
-          <h3 className="text-md text-primary font-bold">
+          <h3 className="text-md text-primary font-bold flex items-center">
+            <span className="mr-2">
+              <Icon icon={faCalendar} size="2x" />
+            </span>{" "}
             Interview Scheduling
           </h3>
           <p className="text-primary">
@@ -114,7 +134,7 @@ export default function Collaboration() {
         </motion.div>
         <motion.div
           onMouseEnter={() => togglePause(2)}
-          onMouseLeave={togglePause}
+          onMouseLeave={() => togglePause()}
           variants={variant}
           initial="rest"
           animate={index == 2 ? "raise" : "lower"}
@@ -129,14 +149,19 @@ export default function Collaboration() {
             minHeight: "8rem",
           }}
         >
-          <h3 className="text-md text-primary font-bold">Integration</h3>
+          <h3 className="text-md text-primary font-bold flex items-center">
+            <span className="mr-2">
+              <Icon icon={faObjectGroup} size="2x" />
+            </span>
+            Integration
+          </h3>
           <p className="text-primary">
             Integrate with third party applications for direct calls.
           </p>
         </motion.div>
         <motion.div
           onMouseEnter={() => togglePause(3)}
-          onMouseLeave={togglePause}
+          onMouseLeave={() => togglePause()}
           variants={variant}
           initial="rest"
           animate={index == 3 ? "raise" : "lower"}
@@ -151,7 +176,10 @@ export default function Collaboration() {
             minHeight: "10rem",
           }}
         >
-          <h3 className="text-md text-primary font-bold">
+          <h3 className="text-md text-primary font-bold flex items-center">
+            <span className="mr-2">
+              <Icon icon={faMagnifyingGlass} size="2x" />
+            </span>{" "}
             Customizable Search
           </h3>
           <p className="text-primary">
@@ -161,7 +189,7 @@ export default function Collaboration() {
         </motion.div>
         <motion.div
           onMouseEnter={() => togglePause(4)}
-          onMouseLeave={togglePause}
+          onMouseLeave={() => togglePause()}
           variants={variant}
           initial="rest"
           animate={index == 4 ? "raise" : "lower"}
@@ -176,7 +204,10 @@ export default function Collaboration() {
             minHeight: "10rem",
           }}
         >
-          <h3 className="text-md text-primary font-bold">
+          <h3 className="text-md text-primary font-bold flex items-center">
+            <span className="mr-2">
+              <Icon icon={faUserGroup} size="2x" />
+            </span>{" "}
             Candidate Management
           </h3>
           <p className="text-primary">
@@ -185,7 +216,7 @@ export default function Collaboration() {
         </motion.div>
         <motion.div
           onMouseEnter={() => togglePause(5)}
-          onMouseLeave={togglePause}
+          onMouseLeave={() => togglePause()}
           variants={variant}
           initial="rest"
           animate={index == 5 ? "raise" : "lower"}
@@ -200,7 +231,10 @@ export default function Collaboration() {
             minHeight: "10rem",
           }}
         >
-          <h3 className="text-md text-primary font-bold">
+          <h3 className="text-md text-primary font-bold flex items-center">
+            <span className="mr-2">
+              <Icon icon={faChartSimple} size="2x" />
+            </span>{" "}
             Reporting and Analytics
           </h3>
           <p className="text-primary">
