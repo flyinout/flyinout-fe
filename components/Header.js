@@ -3,7 +3,8 @@ import { Responsive } from "./ResponsiveWidth";
 import ProductLogo from "../public/ProductLogo.png";
 import Icon from "./Icon";
 import { useState } from "react";
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const [isMenuShown, setIsMenuShown] = useState(false);
@@ -14,19 +15,26 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <nav className="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 md:px-48">
-        <div id="productLogo" className="flex items-center">
-          <Image src={ProductLogo} alt="Logo" height={25} width={25} />
-          <div className="flex flex-col">
-            <h2 className="text-gray-50 font-bold text-base md:text-lg ml-2 mb-0">
-              FlyinOut
-            </h2>
-            <span className="text-secondary ml-2 " style={{ fontSize: "0.8rem" }}>
-              Where talent takes flight
-            </span>
+        <div>
+          <div id="productLogo" className="flex items-center">
+            <Image src={ProductLogo} alt="Logo" height={25} width={25} />
+            <div className="flex flex-col">
+              <h2 className="text-gray-50 font-bold text-base md:text-lg ml-2 -mb-2">
+                FlyinOut
+              </h2>
+            </div>
           </div>
+          <span className="text-secondary" style={{ fontSize: "0.8rem" }}>
+            Where talent takes flight
+          </span>
         </div>
+
         <svg
           xmlns="http://www.w3.org/2000/svg"
           onClick={toggleMenu}
@@ -70,6 +78,6 @@ export default function Header() {
           </ul>
         </div>
       </nav>
-    </header>
+    </motion.header>
   );
 }

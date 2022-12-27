@@ -14,7 +14,38 @@
 }
 
 body {
-  background-color: #05010D;
+  background-color: #05010d;
   height: 100%;
   overflow-x: clip;
+}
+
+.svg-inline--fa.fa-handshake {
+  height: 1.25rem;
+  width: 100%;
+  margin-bottom: -2px;
+}
+
+.svg-inline--fa.fa-calendar {
+  height: 1rem;
+  width: 100%;
+}
+
+.svg-inline--fa.fa-object-group {
+  height: 1rem;
+  width: 100%;
+}
+
+.svg-inline--fa.fa-magnifying-glass {
+  height: 0.95rem;
+  width: 100%;
+}
+
+.svg-inline--fa.fa-user-group {
+  height: 1rem;
+  width: 100%;
+}
+
+.svg-inline--fa.fa-chart-simple {
+  height: 1rem;
+  width: 100%;
 }

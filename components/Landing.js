@@ -1,7 +1,7 @@
 import Header from "./Header";
 import Illustration  from "./Illustration";
 import ObjectiveSection from "./ObjectiveSection";
-import Title from "./Title";
+import Intro from "./Intro";
 import Footer from "./Footer";
 import Automations from "./Automations";
 import Collaboration from "./Collaboration";
@@ -13,8 +13,7 @@ import Features from "./Features";
 export default function Landing() {
   return (
     <>
-      <Header />
-      <Title />
+      <Intro />
       <Illustration />
       {/* <Features /> */}
       <ObjectiveSection />

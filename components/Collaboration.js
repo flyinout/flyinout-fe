@@ -91,7 +91,7 @@ export default function Collaboration() {
         >
           <h3 className="text-md text-primary font-bold flex items-center">
             <span className="mr-2">
-              <Icon icon={faHandshake} size="2x" />
+              <Icon icon={faHandshake} />
             </span>
             Engaging
           </h3>
@@ -118,7 +118,7 @@ export default function Collaboration() {
         >
           <h3 className="text-md text-primary font-bold flex items-center">
             <span className="mr-2">
-              <Icon icon={faCalendar} size="2x" />
+              <Icon icon={faCalendar} />
             </span>{" "}
             Interview Scheduling
           </h3>
@@ -145,7 +145,7 @@ export default function Collaboration() {
         >
           <h3 className="text-md text-primary font-bold flex items-center">
             <span className="mr-2">
-              <Icon icon={faObjectGroup} size="2x" />
+              <Icon icon={faObjectGroup} />
             </span>
             Integration
           </h3>
@@ -172,7 +172,7 @@ export default function Collaboration() {
         >
           <h3 className="text-md text-primary font-bold flex items-center">
             <span className="mr-2">
-              <Icon icon={faMagnifyingGlass} size="2x" />
+              <Icon icon={faMagnifyingGlass} />
             </span>{" "}
             Customizable Search
           </h3>
@@ -200,7 +200,7 @@ export default function Collaboration() {
         >
           <h3 className="text-md text-primary font-bold flex items-center">
             <span className="mr-2">
-              <Icon icon={faUserGroup} size="2x" />
+              <Icon icon={faUserGroup} />
             </span>{" "}
             Candidate Management
           </h3>
@@ -227,7 +227,7 @@ export default function Collaboration() {
         >
           <h3 className="text-md text-primary font-bold flex items-center">
             <span className="mr-2">
-              <Icon icon={faChartSimple} size="2x" />
+              <Icon icon={faChartSimple} />
             </span>{" "}
             Reporting and Analytics
           </h3>
