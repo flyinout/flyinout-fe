@@ -13,8 +13,6 @@ import {
 
 const Illustration = () => {
   const { scrollYProgress } = useViewportScroll();
-  const textX = useTransform(scrollYProgress, [0, 1], [0, -900]);
-  const imageX = useTransform(scrollYProgress, [0, 1], [0, 900]);
   return (
     <>
       <div
@@ -36,7 +34,6 @@ const Illustration = () => {
         ></div>
         {/* from left to right slide in */}
         <motion.div
-          style={{ x: textX }}
           initial={{ x: "-100vw", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "100vw", opacity: 0 }}
@@ -55,7 +52,6 @@ const Illustration = () => {
 
         {/* from right to left slide in */}
         <motion.div
-          style={{ x: imageX }}
           initial={{ x: "100vw", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -71,7 +67,6 @@ const Illustration = () => {
           </div>
         </motion.div>
         <motion.div
-          style={{ x: imageX }}
           initial={{ x: "100vw", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -82,7 +77,6 @@ const Illustration = () => {
           </div>
         </motion.div>
         <motion.div
-          style={{ x: imageX }}
           initial={{ x: "100vw", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
