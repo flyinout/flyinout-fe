@@ -15,7 +15,8 @@ import FAstronaut from "../public/flyingAstronaut.png";
 const Title = () => {
   const { scrollY, scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [1, 0.5]);
-  const astronautY = useTransform(scrollY, [0, 100], [0, 150]);
+  const astronautY = useTransform(scrollY, [0, 100], ['0vh', '-20vh']);
+  const astronautX = useTransform(scrollY, [0, 100], ['0vw', '10vw']);
   useEffect(() => {
     scrollY.onChange((s) => console.log("scrollY ", s));
     scrollYProgress.onChange((s) => console.log("scrollYProgress ", s));
@@ -33,7 +34,7 @@ const Title = () => {
         className="relative text-center h-full flex flex-col justify-center items-center text-white"
       >
         <motion.div
-          style={{ y: astronautY }}
+          style={{ y: astronautY, x:astronautX }}
           className="absolute opacity-5 -z-0"
         >
           <Image
