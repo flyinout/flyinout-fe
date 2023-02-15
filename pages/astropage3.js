@@ -8,6 +8,7 @@ export default function Landing() {
                     <div className="circle four"></div>
                         <div className="circle five"></div>
                             <h1 className="text-white">hey</h1>
+                            
     </div>
         </>
     );}

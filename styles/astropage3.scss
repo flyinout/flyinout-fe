@@ -10,15 +10,6 @@ $color-four: #FED766;
 $color-five: #E6E6EA;
 $front-circle: rgba(0,0,0,1);
 
-body,
-.container {
-  background: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 100vh;
-}
 .circle {
   will-change: transform;
   width: $circle1-dim;

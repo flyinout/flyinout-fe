@@ -1,7 +1,7 @@
 export default function Landing() {
     return (
         <>
-        <div className="relative flex" style={{height:"100vh"}}>
+        <div className="relative" style={{height:"100vh"}}>
         <div className="flex justify-center items-center h-screen overflow-hidden">
         <div class="circles-wrapper">
             <div class="circleastropage2 circle-lg">
@@ -9,5 +9,6 @@ export default function Landing() {
         </div></div>
         </div>
         </>
+        
     )
 }
