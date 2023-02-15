@@ -49,3 +49,60 @@ body {
   height: 1rem;
   width: 100%;
 }
+
+/* ASTRO PAGE */
+
+.astro-bg{
+    width: 100vh;
+    animation: spin 25s linear infinite;
+}
+
+/* astro page 2 */
+
+.circles-wrapper {
+  width: 720px;
+  height: 720px;
+}
+.circleastropage2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  border: double 2px transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#000, #000), radial-gradient(circle at top left, #B673F8,#4CA5FF);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.circleastropage2::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #2a5d91;
+  top: -12px;
+  border-radius: 50%;
+/*   box-shadow: 0 0 10px 12px #2a5d91; */
+}
+.circleastropage2::after{
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #2a5d91;
+  bottom: -12px;
+  border-radius: 50%;
+/*   box-shadow: 0 0 10px 6px #2a5d91; */
+}
+.circle-lg {
+  width: 720px;
+  height: 720px;
+  animation: rotateCircles 10.5s linear infinite;
+}
+@keyframes rotateCircles {
+  from {
+    transform: rotate(0);
+  } to {
+    transform: rotate(360deg);
+  }
+}

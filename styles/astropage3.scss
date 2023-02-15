@@ -1,0 +1,97 @@
+$circle1-dim: 36em;
+$circle2-dim: 38em;
+$circle3-dim: 34em;
+$circle4-dim: 32em;
+$circle5-dim: 30em;
+$color-one: #2AB7CA;
+$color-two: #F4F4F8;
+$color-three: #FE4A49;
+$color-four: #FED766;
+$color-five: #E6E6EA;
+$front-circle: rgba(0,0,0,1);
+
+body,
+.container {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+}
+.circle {
+  will-change: transform;
+  width: $circle1-dim;
+  height: $circle1-dim;
+  background-image: radial-gradient(
+    $color-one,
+    transparent,
+    $color-one);
+  border-radius: 80% / 90%;
+  position: absolute;
+  animation: 8s ease rotate infinite;
+  opacity: .2;
+  
+  &:after {
+    content:"";
+    width: 28em;
+    height: 30em;
+    border-radius: 50%;
+    background: $front-circle;
+    position: absolute;
+  }
+  
+  &.two {
+    width: $circle2-dim;
+    height: $circle2-dim;
+    background-image: radial-gradient(
+      $color-two,
+      transparent,
+      $color-two);
+    animation: 10s linear rotate infinite;
+  }
+  
+  &.three {
+    width: $circle3-dim;
+    height: $circle3-dim;
+    background-image: radial-gradient(
+      $color-three,
+      transparent,
+      $color-three);
+    animation: 12s ease rotate infinite;
+  }
+  &.four {
+    width: $circle4-dim;
+    height: $circle4-dim;
+     background-image: radial-gradient(
+       $color-four,
+       transparent,
+       $color-four);
+    animation: 11s ease rotate infinite;
+  }
+
+  &.five{
+    width: $circle5-dim;
+    height: $circle5-dim;
+     background-image: radial-gradient(
+       $color-five,
+       transparent
+       ,
+       $color-five);
+    animation: 15s ease rotate infinite;
+  }
+}
+
+h1.text {
+  color: #fff;
+  z-index: 100;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
